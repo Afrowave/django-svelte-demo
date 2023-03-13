@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     'django_svelte',
     'rest_framework',
-    'drf_yasg',
+    'drf_spectacular',
 
     'django_svelte_demo',
 ]
@@ -130,3 +130,8 @@ STATIC_ROOT = BASE_DIR / 'site_media' / 'static'
 STATICFILES_DIRS = [
     BASE_DIR.parent / "svelte" / "public" / "build",
 ]
+
+REST_FRAMEWORK = {
+    # YOUR SETTINGS
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
